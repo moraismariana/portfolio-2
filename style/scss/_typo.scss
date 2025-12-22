@@ -1,0 +1,64 @@
+// titulo 32px
+// texto 1 19px
+// texto 2 17px
+
+@use "./mixins" as *;
+@use "./colors" as *;
+
+@mixin title-1 {
+  font-size: px-rem(30);
+  font-weight: 400;
+  line-height: 1.2em;
+  font-family: "Reddit Sans", Arial, sans-serif;
+  // & {
+  //   @include screen(notebook-s) {
+  //     font-size: px-rem(28);
+  //   }
+  // }
+}
+
+@mixin text-1 {
+  font-size: px-rem(17.5);
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.4em;
+  font-family: "Reddit Sans", Arial, sans-serif;
+  // & {
+  //   @include screen(notebook-s) {
+  //     font-size: px-rem(17);
+  //   }
+  // }
+  b {
+    font-weight: 500;
+  }
+}
+
+@mixin text-2 {
+  font-size: px-rem(15.5);
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.4em;
+  font-family: "Reddit Sans", Arial, sans-serif;
+  // & {
+  //   @include screen(notebook-s) {
+  //     font-size: px-rem(17);
+  //   }
+  // }
+}
+
+@mixin button {
+  background-color: $w;
+  padding: $s2 $s5;
+  color: $c2;
+  transition: 0.2s;
+  position: relative;
+  top: 0;
+  @include border;
+  @include shadow-1;
+  @include text-2;
+  &:hover {
+    top: -2px;
+    padding: $s2 $s4;
+    @include shadow-2;
+  }
+}

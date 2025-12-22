@@ -1,0 +1,64 @@
+@use "./colors" as *;
+@use "./mixins" as *;
+@use "./global";
+@use "./typo" as *;
+
+header {
+  display: flex;
+  gap: $s5;
+  align-items: center;
+  justify-content: space-between;
+  color: $c2;
+  @include ptop-5;
+  @include pbottom-5;
+  @include container;
+  @include text-2;
+  ul {
+    display: flex;
+    gap: $s2;
+  }
+}
+
+.pagina-inicial {
+  .intro {
+    text-align: center;
+    height: calc(100svh - 61.7px);
+    @include container;
+    div {
+      position: relative;
+      top: calc(50% - 61.7px);
+      transform: translateY(-50%);
+    }
+    img {
+      width: 130px;
+      border-radius: 200px;
+      @include mbottom-5;
+      @include align-div;
+    }
+    p:nth-of-type(1) {
+      @include mbottom-2;
+      @include text-1;
+    }
+    h1 {
+      @include mbottom-2;
+      @include title-1;
+      & {
+        text-transform: uppercase;
+        background: linear-gradient(to right, $c1, $c3);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+    }
+    p:nth-of-type(2) {
+      max-width: 40ch;
+      @include align-div;
+      @include mbottom-4;
+      @include text-1;
+    }
+    button {
+      @include button;
+    }
+  }
+}

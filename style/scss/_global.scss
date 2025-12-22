@@ -1,0 +1,49 @@
+@use "./colors" as *;
+// @use "./mixins" as *;
+// @use "./typo" as *;
+
+body {
+  margin: 0;
+  background-color: $w2;
+  font-family: "Reddit Sans", Arial, sans-serif;
+  color: $c1;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dd {
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  display: block;
+  max-width: fit-content;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  color: inherit;
+  background: none;
+  outline: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
