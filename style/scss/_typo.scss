@@ -48,7 +48,7 @@
 
 @mixin button {
   background-color: $w;
-  padding: $s2 $s5;
+  padding: $s2 $s4;
   color: $c2;
   transition: 0.2s;
   position: relative;
@@ -58,7 +58,6 @@
   @include text-2;
   &:hover {
     top: -2px;
-    padding: $s2 $s4;
     @include shadow-2;
   }
 }
