@@ -248,6 +248,11 @@ footer {
         @include text-2;
       }
       li {
+        filter: grayscale(100%);
+        transition: 0.05s;
+        &:hover {
+          filter: grayscale(0%);
+        }
         a {
           @include align-div;
         }
@@ -277,7 +282,6 @@ footer {
       padding: $s5 $s6;
       text-align: center;
       min-width: 0;
-      align-content: center;
       @include border;
       @include shadow-1;
       h3 {
@@ -289,6 +293,12 @@ footer {
       }
       ul {
         li {
+          cursor: default;
+          filter: grayscale(100%);
+          transition: 0.05s;
+          &:hover {
+            filter: grayscale(0%);
+          }
           div {
             @include mbottom-3;
           }
@@ -319,6 +329,11 @@ footer {
         @include border;
         @include shadow-1;
         width: 100%;
+        filter: grayscale(100%);
+        transition: 0.05s;
+        &.is-active:hover {
+          filter: grayscale(0%);
+        }
         a {
           max-width: none;
           img[alt="Imagem"] {
@@ -368,12 +383,27 @@ footer {
 }
 
 .pagina-tecnologias {
-  h1 {
-    text-align: center;
+  min-width: 100vh;
+  .titulo {
+    position: relative;
     @include mtop-8;
     @include mbottom-8;
     @include container;
-    @include title-1;
+    & > a {
+      @include link;
+      & {
+        position: absolute;
+        top: 10px;
+        left: $s10;
+      }
+    }
+    h1 {
+      text-align: center;
+      @include title-1;
+    }
+  }
+  .tec-conteudo {
+    min-height: calc(100vh - 61.7px - 69px - $s8);
   }
   .tec-grid {
     @include mbottom-12;
@@ -399,8 +429,13 @@ footer {
         padding: $s5 $s6;
         text-align: center;
         align-content: center;
+        filter: grayscale(100%);
+        transition: 0.05s;
         @include border;
         @include shadow-1;
+        &:hover {
+          filter: grayscale(0%);
+        }
         div {
           @include mbottom-3;
         }

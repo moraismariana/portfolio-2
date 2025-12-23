@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     drag: false,
     pagination: false,
     arrows: true,
-    gap: "1rem",
+    // gap: "1rem",
   }).mount();
 
   new Splide("#slider-projetos", {
@@ -32,14 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
     interval: 10000,
     speed: 1100,
     pauseOnHover: false,
-    type: "loop",
     drag: false,
     pagination: false,
     arrows: true,
+    gap: "20px",
+    type: "loop",
+    updateOnMove: true,
     focus: "center",
-    gap: "1rem",
     slideFocus: true,
     fixedWidth: "60vw",
-    gap: "20px",
+    trimSpace: false,
+    omitEnd: true,
   }).mount();
 });
