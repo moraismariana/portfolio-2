@@ -65,6 +65,7 @@
 @mixin link {
   color: $c2;
   position: relative;
+  max-width: fit-content;
   @include text-2;
   &::after {
     content: "";

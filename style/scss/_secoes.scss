@@ -226,23 +226,31 @@ footer {
     .hab-grid {
       display: grid;
       grid-template-columns: 1fr 3fr;
-      gap: $s8;
+      gap: $s6;
     }
     .certificados {
       background: $w;
       padding: $s5 $s6;
       text-align: center;
+      min-width: 0;
       align-content: center;
       @include border;
       @include shadow-1;
       h3 {
-        @include mbottom-3;
         @include text-1;
         & {
           font-weight: 500;
         }
       }
+      & > p {
+        color: $c2;
+        @include mbottom-3;
+        @include text-2;
+      }
       li {
+        a {
+          @include align-div;
+        }
         div {
           @include mbottom-3;
         }
@@ -253,13 +261,14 @@ footer {
           }
         }
         p:nth-of-type(2) {
-          color: $c2;
+          color: $c3;
           @include mbottom-3;
           @include text-2;
         }
-        a {
+        p:nth-of-type(3) {
           @include align-div;
           @include link;
+          @include text-2;
         }
       }
     }
@@ -267,6 +276,7 @@ footer {
       background: $w;
       padding: $s5 $s6;
       text-align: center;
+      min-width: 0;
       align-content: center;
       @include border;
       @include shadow-1;
@@ -278,10 +288,6 @@ footer {
         }
       }
       ul {
-        display: flex;
-        gap: $s7;
-        justify-content: space-around;
-        @include mbottom-5;
         li {
           div {
             @include mbottom-3;
@@ -293,6 +299,7 @@ footer {
         }
       }
       & > a {
+        @include mtop-5;
         @include align-div;
         @include link;
       }
@@ -301,7 +308,6 @@ footer {
 
   .projetos {
     @include pbottom-12;
-    @include container;
     h2 {
       text-align: center;
       @include mbottom-8;
@@ -316,7 +322,10 @@ footer {
         a {
           max-width: none;
           img[alt="Imagem"] {
-            width: 100%;
+            width: 60vw;
+            height: 70vh;
+            object-fit: cover;
+            @include border;
           }
           & > div {
             padding: $s5 $s6;
