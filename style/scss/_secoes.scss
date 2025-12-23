@@ -357,3 +357,49 @@ footer {
     }
   }
 }
+
+.pagina-tecnologias {
+  h1 {
+    text-align: center;
+    @include mtop-8;
+    @include mbottom-8;
+    @include container;
+    @include title-1;
+  }
+  .tec-grid {
+    @include mbottom-12;
+    @include container;
+    ul {
+      & > div {
+        grid-template-columns: repeat(6, 1fr);
+        display: grid;
+        gap: $s5;
+        &:not(:last-of-type) {
+          @include mbottom-5;
+        }
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+          padding-right: 80px;
+        }
+        &:nth-of-type(2) {
+          padding-left: 80px;
+        }
+      }
+      li {
+        background: $w;
+        padding: $s5 $s6;
+        text-align: center;
+        align-content: center;
+        @include border;
+        @include shadow-1;
+        div {
+          @include mbottom-3;
+        }
+        p {
+          color: $c2;
+          @include text-2;
+        }
+      }
+    }
+  }
+}
