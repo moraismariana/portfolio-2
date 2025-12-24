@@ -32,42 +32,44 @@
 
   <section class="intro">
     <div>
-      <img src="./img/mariana.webp" alt="Mariana M. Santiago">
-      <p>Prazer, Mariana 👋</p>
-      <h1>Desenvolvedora Full Stack e Designer UI/UX</h1>
-      <p>Desenvolvedora com <b>graduação superior em Sistemas de Informação pela UFVJM</b></p>
-      <button>Baixar currículo</button>
+      <img src="./img/mariana.webp" alt="Mariana M. Santiago" class="transition-element">
+      <p class="transition-element">Prazer, Mariana 👋</p>
+      <h1 class="transition-element">Desenvolvedora Full Stack e Designer UI/UX</h1>
+      <p class="transition-element">Desenvolvedora com <b>graduação superior em Sistemas de Informação pela UFVJM</b></p>
+      <button class="transition-element">Baixar currículo</button>
     </div>
   </section>
 
   <section class="sobre">
     <div class="sobre-conteudo">
-      <h2>Sobre mim</h2>
-      <p>
-        Sou uma Desenvolvedora de Software formada em Sistemas de Informação pela UFVJM. Sempre fui uma pessoa criativa - e, aos poucos, aprendi a focalizar a minha criatividade na <b>resolução de problemas</b> e <b>na criação de sites e projetos</b>.
-      </p>
-      <p>
-        Durante meus quatro anos de graduação, atuei como designer e desenvolvedora de sites autônoma, criando <b>soluções digitais para diferentes clientes</b>.
-      </p>
-      <p>
-        Meu principal projeto foi a criação de um <b>e-commerce totalmente do zero utilizando programação</b>. Para esse projeto, além da arquitetura do software, da prototipação da interface e do próprio desenvolvimento, foram implementadas diversas medidas de segurança e integrações complexas como gateways de pagamento, sistema de transporte e integração com AWS.</p>
+      <h2 class="transition-element">Sobre mim</h2>
+      <div class="transition-element">
+        <p>
+          Sou uma Desenvolvedora de Software formada em Sistemas de Informação pela UFVJM. Sempre fui uma pessoa criativa - e, aos poucos, aprendi a focalizar a minha criatividade na <b>resolução de problemas</b> e <b>na criação de sites e projetos</b>.
+        </p>
+        <p>
+          Durante meus quatro anos de graduação, atuei como designer e desenvolvedora de sites autônoma, criando <b>soluções digitais para diferentes clientes</b>.
+        </p>
+        <p>
+          Meu principal projeto foi a criação de um <b>e-commerce totalmente do zero utilizando programação</b>. Para esse projeto, além da arquitetura do software, da prototipação da interface e do próprio desenvolvimento, foram implementadas diversas medidas de segurança e integrações complexas como gateways de pagamento, sistema de transporte e integração com AWS.</p>
+      </div>
     </div>
   </section>
 
   <section class="trajetoria">
-    <h2>Trajetória</h2>
+    <h2 class="transition-element">Trajetória</h2>
     <ul>
-      <li>
+      <li class="transition-element">
         <p>Bacharelado em Sistemas de Informação</p>
         <p>Universidade Federal dos Vales do Jequitinhonha e Mucuri</p>
         <p>out 2021 - dez 2025</p>
       </li>
-      <li>
+      <li class="transition-element">
         <p>Designer</p>
         <p>Universidade Federal dos Vales do Jequitinhonha e Mucuri</p>
         <p>nov 2023 - jul 2024</p>
       </li>
-      <li>
+      <li class="transition-element">
         <p>Desenvolvedora Web</p>
         <p>Autônoma</p>
         <p>set 2024 - até o momento</p>
@@ -76,9 +78,9 @@
   </section>
 
   <section class="habilidades">
-    <h2>Habilidades</h2>
+    <h2 class="transition-element">Habilidades</h2>
     <div class="hab-grid">
-      <div id="slider-certificados" class="splide certificados">
+      <div id="slider-certificados" class="splide certificados transition-element">
         <h3>Certificados</h3>
         <p>400+ horas</p>
         <div class="splide__track">
@@ -197,7 +199,7 @@
           </ul>
         </div>
       </div>
-      <div id="slider-tecnologias" class="splide tecnologias">
+      <div id="slider-tecnologias" class="splide tecnologias transition-element">
         <h3>Tecnologias</h3>
         <div class="splide__track">
           <ul class="splide__list">
@@ -408,8 +410,8 @@
   </section>
 
   <section id="slider-projetos" class=" splide projetos">
-    <h2>Projetos</h2>
-    <div class="splide__track">
+    <h2 class="transition-element">Projetos</h2>
+    <div class="splide__track transition-element">
       <ul class="splide__list">
         <li class="splide__slide">
           <a href="https://legadocachacaria.com.br" target="_blank">
@@ -451,7 +453,7 @@
     </div>
   </section>
 
-  <section class="contato">
+  <section class="contato transition-element">
     <h2>Contato</h2>
     <p>Estou pronta para os próximos projetos ;)</p>
     <ul>
@@ -468,9 +470,10 @@
         </a>
       </li>
       <li>
-        <button>
+        <button id="contato-email">
           <img src="./img/icones/email.svg" alt="Ícone">
           <p>Email</p>
+          <p id="email"></p>
         </button>
       </li>
     </ul>

@@ -4,9 +4,13 @@
 
 body {
   margin: 0;
-  background-color: $w2;
   font-family: "Reddit Sans", Arial, sans-serif;
   color: $c1;
+  background-color: $w2;
+  background-image: linear-gradient($c4 1px, transparent 1px),
+    linear-gradient(90deg, $c4 1px, transparent 1px);
+  background-size: 110px 110px;
+  background-position: center -20px;
 }
 
 h1,
@@ -46,4 +50,16 @@ button {
   border: none;
   cursor: pointer;
   box-sizing: border-box;
+}
+
+// Específico
+.transition-element {
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+.transition-element--visible {
+  transform: translateY(0);
+  opacity: 1;
 }

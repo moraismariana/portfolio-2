@@ -50,7 +50,7 @@
   background-color: $w;
   padding: $s2 $s4;
   color: $c2;
-  transition: 0.2s;
+  transition: top 0.2s, transform 0.8s, opacity 0.8s;
   position: relative;
   top: 0;
   @include border;
