@@ -1,17 +1,26 @@
 (function slides() {
   if (typeof Splide === "undefined") return;
   document.addEventListener("DOMContentLoaded", () => {
+    let screenWidth = window.innerWidth;
     new Splide("#slider-tecnologias", {
       perPage: 7,
       type: "loop",
       drag: false,
       pagination: false,
       arrows: false,
-      gap: "1rem",
+      gap: "10px",
       autoScroll: {
         speed: 0.5,
         pauseOnHover: false,
         pauseOnFocus: false,
+      },
+      breakpoints: {
+        1024: {
+          perPage: 5,
+        },
+        480: {
+          perPage: 3,
+        },
       },
     }).mount(window.splide.Extensions);
 
@@ -44,6 +53,17 @@
       omitEnd: true,
       trimSpace: false,
       clones: 6,
+      breakpoints: {
+        768: {
+          fixedWidth: "calc(100vw - 80px)",
+          drag: true,
+          // arrows: false,
+          gap: "12px",
+        },
+        480: {
+          fixedWidth: "calc(100vw - 48px)",
+        },
+      },
     }).mount();
   });
 })();
@@ -99,4 +119,23 @@
       }, index * intervalo);
     });
   });
+})();
+
+(function curriculo() {
+  const botao = document.getElementById("cv");
+
+  if (botao) {
+    const arquivoUrl = "./doc/MarianaSantiago.pdf";
+    const nomeArquivo = "MarianaSantiago.pdf";
+
+    botao.addEventListener("click", () => {
+      window.open(arquivoUrl, "_blank");
+      const link = document.createElement("a");
+      link.href = arquivoUrl;
+      link.download = nomeArquivo;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
 })();
