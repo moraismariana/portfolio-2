@@ -30,6 +30,7 @@
       drag: false,
       pagination: false,
       arrows: true,
+      speed: 1100,
       // gap: "1rem",
     }).mount();
 
@@ -119,23 +120,4 @@
       }, index * intervalo);
     });
   });
-})();
-
-(function curriculo() {
-  const botao = document.getElementById("cv");
-
-  if (botao) {
-    const arquivoUrl = "./doc/MarianaSantiago.pdf";
-    const nomeArquivo = "MarianaSantiago.pdf";
-
-    botao.addEventListener("click", () => {
-      window.open(arquivoUrl, "_blank");
-      const link = document.createElement("a");
-      link.href = arquivoUrl;
-      link.download = nomeArquivo;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
-  }
 })();

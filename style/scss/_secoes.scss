@@ -34,13 +34,23 @@ footer {
   @include ptop-6;
   @include pbottom-6;
   @include text-2;
+  & {
+    @include screen(tablet) {
+      background-size: 2000px;
+    }
+  }
 }
 
 .pagina-inicial {
   .intro {
     text-align: center;
-    height: calc(100svh - 61.7px);
+    height: calc(100vh - 61.7px);
     @include container;
+    & {
+      @include screen(mobile) {
+        height: calc(100vh - 90px);
+      }
+    }
     div {
       position: relative;
       top: calc(50% - 61.7px);
@@ -49,7 +59,7 @@ footer {
     img {
       width: 130px;
       border-radius: 200px;
-      transition: 0.2s;
+      transition: 0.5s;
       @include mbottom-5;
       @include align-div;
       & {
@@ -64,13 +74,13 @@ footer {
       }
     }
     p:nth-of-type(1) {
-      transition: 0.4s;
+      transition: 0.6s;
       color: $c2;
       @include mbottom-2;
       @include text-1;
     }
     h1 {
-      transition: 0.4s;
+      transition: 0.6s;
       @include mbottom-2;
       @include title-1;
       & {
@@ -83,13 +93,14 @@ footer {
       }
     }
     p:nth-of-type(2) {
-      transition: 0.4s;
+      transition: 0.6s;
       max-width: 40ch;
       @include align-div;
       @include mbottom-4;
       @include text-1;
     }
-    button {
+    a {
+      @include align-div;
       @include button;
     }
   }
@@ -99,7 +110,6 @@ footer {
     background-image: url("../../img/background.webp");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     color: $w2;
     @include ptop-13;
     @include pbottom-13;
@@ -420,7 +430,8 @@ footer {
             color: $c2;
             @include text-2;
           }
-          svg {
+          img {
+            @include align-div;
             @include screen(mobile) {
               width: 42px;
             }
@@ -722,6 +733,9 @@ footer {
     &.ativo {
       transform: translateX(0);
       opacity: 1;
+    }
+    img {
+      @include align-div;
     }
   }
 }
