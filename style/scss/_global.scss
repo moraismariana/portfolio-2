@@ -6,17 +6,19 @@ body {
   margin: 0;
   font-family: "Reddit Sans", Arial, sans-serif;
   color: $c1;
+  position: relative;
   background-color: $w2;
-  background-image: linear-gradient($c4 1px, transparent 1px),
-    linear-gradient(90deg, $c4 1px, transparent 1px);
-  background-size: 300px 300px;
-  background-position: center;
-  background-attachment: fixed;
-  & {
-    @include screen(mobile) {
-      background-size: 200px 200px;
-    }
-  }
+  // background-image:
+  //   linear-gradient($c4 1px, transparent 1px),
+  //   linear-gradient(90deg, $c4 1px, transparent 1px);
+  // background-size: 300px 300px;
+  // background-position: center;
+  // background-attachment: fixed;
+  // & {
+  //   @include screen(mobile) {
+  //     background-size: 200px 200px;
+  //   }
+  // }
 }
 
 h1,
@@ -59,10 +61,36 @@ button {
 }
 
 // Específico
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100lvh; /* Resolve o pulo no mobile */
+  z-index: -1;
+
+  /* Seu background original */
+  background-color: $w2;
+  background-image:
+    linear-gradient($c4 1px, transparent 1px),
+    linear-gradient(90deg, $c4 1px, transparent 1px);
+  background-size: 300px 300px;
+  background-position: center;
+  & {
+    @include screen(mobile) {
+      background-size: 200px 200px;
+    }
+  }
+}
+
 .transition-element {
   transform: translateY(10px);
   opacity: 0;
-  transition: transform 1s, opacity 1s;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 
 .transition-element--visible {

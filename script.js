@@ -121,3 +121,23 @@
     });
   });
 })();
+
+(function efeitoTypewriter() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const elemento = document.getElementById("typewriter");
+
+    const texto = "Desenvolvedora Full Stack & Designer UI/UX";
+    const velocidade = 100;
+    let index = 0;
+
+    function digitar() {
+      if (index < texto.length) {
+        elemento.innerHTML += texto.charAt(index);
+        index++;
+        setTimeout(digitar, velocidade);
+      }
+    }
+
+    digitar();
+  });
+})();
